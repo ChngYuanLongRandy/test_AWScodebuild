@@ -5,20 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Using python 3.8.10
+      with: python-version: 3.8.10
     - name: Install requirements
       run: make install
-  lint:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Running Linting tools
+    - name: lint
       run: make lint
-  test:
-    needs: lint
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
     - name: Running pytest
       run: make test
       
