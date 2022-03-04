@@ -1,11 +1,15 @@
 name: test_awscodebuild
 on: [push]
 jobs:
-  install:
+  build and test:
     runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          python-version: [ '2.x', '3.x' ]
+    name: Python ${{ matrix.python-version }} sample
     steps:
     - uses: actions/checkout@v3
-    - name: Using python 3.8.10
+    - name: Using different python versions 
       uses: actions/setup-python@v2
       with: 
         python-version: 3.8.10
