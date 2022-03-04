@@ -7,4 +7,4 @@ make lint:
 	black .
 
 make test:
-	py -m pytest
+	pytest
