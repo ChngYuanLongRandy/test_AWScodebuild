@@ -9,11 +9,13 @@ jobs:
       run: make install
   lint:
     needs: install
+    runs-on: ubuntu-latest
     steps:
     - name: Running Linting tools
       run: make lint
   test:
     needs: lint
+    runs-on: ubuntu-latest
     steps:
     - name: Running pytest
       run: make test
