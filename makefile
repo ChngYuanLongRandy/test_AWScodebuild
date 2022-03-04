@@ -4,6 +4,7 @@ make install:
 	pip install --upgrade pip && pip install -r requirements.txt 
 
 make lint:
-	
+	black .
 
-make test
+make test:
+	py -m pytest

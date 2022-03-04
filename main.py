@@ -1,3 +1,2 @@
-def simple_function(a,b):
-    return a+b
-
+def simple_function(a, b):
+    return a + b
