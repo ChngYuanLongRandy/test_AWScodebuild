@@ -3,9 +3,9 @@ on: [push]
 jobs:
   build and test:
     runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          python-version: [ '2.x', '3.x' ]
+    strategy:
+      matrix:
+        python-version: [ '2.x', '3.x' ]
     name: Python ${{ matrix.python-version }} sample
     steps:
     - uses: actions/checkout@v3
