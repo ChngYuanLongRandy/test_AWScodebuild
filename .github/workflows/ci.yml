@@ -1,7 +1,7 @@
 name: test_awscodebuild
 on: [push]
 jobs:
-  build and test:
+  build_and_test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
