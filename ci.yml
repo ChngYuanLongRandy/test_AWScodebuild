@@ -1,0 +1,20 @@
+name: test_awscodebuild
+on: [push]
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install requirements
+      run: make install
+  lint:
+    needs: install
+    steps:
+    - name: Running Linting tools
+      run: make lint
+  test:
+    needs: lint
+    steps:
+    - name: Running pytest
+      run: make test
+      
