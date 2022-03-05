@@ -43,6 +43,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: user/app:latest
+          tags: hashketh/test_awsbuildcode:latest
 
       
