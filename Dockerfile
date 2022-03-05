@@ -1,4 +1,4 @@
-FROM python:3.8-bullseye
+FROM python:3.8-slim-buster
 WORKDIR /docker_file
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
