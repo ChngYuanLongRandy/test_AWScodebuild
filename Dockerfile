@@ -1,4 +1,4 @@
-FROM python:3.8.10
+FROM python:3.8-bullseye
 WORKDIR /docker_file
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
