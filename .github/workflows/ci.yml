@@ -23,6 +23,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        name: test_awscodebuild
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: test_awsbuildcode/latest
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       -
